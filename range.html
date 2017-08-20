@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>What is your song?</title>
+	<link rel="stylesheet" type="text/css" href="../css/range.css">
+</head>
+<body>
+	<h1>What is your age?</h1>
+	<div class="block">
+		<p>Left angle
+		<input id="r1" type="range" min="0" max="100" step="2" value="0" oninput="fun1()">
+		<input id="one1" type="text" value="0">
+		</p>
+		<p>Right angle
+		<input id="r2" type="range" min="0" max="100" step="2" value="0" oninput="fun1()">
+		<input id="one2" type="text" value="0">
+		</p>
+		<p>Left bottom
+		<input id="r3" type="range" min="0" max="100" step="2" value="0" oninput="fun1()">
+		<input  id="one3"  type="text" value="0">
+		</p>
+		<p>Right bottom
+		<input id="r4" type="range" min="0" max="100" step="2" value="0" oninput="fun1()">
+		<input  id="one4" type="text" value="0">
+		</p>
+	</div>
+	<div id="block1"></div>
+	<script type="text/javascript">
+	function fun1() {
+	var ran1 = document.getElementById('r1').value;
+	var ran2 = document.getElementById('r2').value;
+	var ran3 = document.getElementById('r3').value;
+	var ran4 = document.getElementById('r4').value;
+
+	var out1 = document.getElementById('one1');
+	var out2 = document.getElementById('one2');
+	var out3 = document.getElementById('one3');
+	var out4 = document.getElementById('one4');
+
+	var block = document.getElementById('block1');
+
+	out1.value= ran1;
+	out2.value= ran2;
+	out3.value= ran3;
+	out4.value= ran4;
+
+	block.style.borderRadius = ran1 + 'px' + ran2 + 'px' + ran3 +'px' + ran4 + 'px';
+
+}
+</script>
+</body>
+</html>
