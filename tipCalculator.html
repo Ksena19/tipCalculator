@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Tip calculator</title>
+	<link rel="stylesheet" type="text/css" href="css/tipCalculator.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>Tip Calculator</h1>
+	<div id="calc">
+		<label>Bill amount:</label>
+			<input  id="amount" name="amount"><br>
+		<label>Percentage Tip:</label>
+			<input id="percentage" name="Percentage"><br>
+		<label>Tip amount:</label>	
+			<input id="tip" name="tip amount"><br>
+		<label>Total:</label>
+			<input id="total"  name="total"><br>	
+		<input id="addup" type="submit" value="Calculate">		
+	</div>
+	 
+	<script type="text/javascript">
+	function calculate (){
+
+	var amount = $('amount').val();
+	var percentage = $('percentage').val();
+	var tip = amount * (percentage / 100);
+	var total = Number(amount) + tip;
+
+	$('tip').val( tip.toFixed(2) );
+	$('total').val( total.toFixed (2) );
+	return false;
+	
+}
+
+	$('#calc').submit( calculate );
+	</script>
+</body>
+</html>
