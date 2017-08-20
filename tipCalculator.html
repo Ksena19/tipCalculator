@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1>Tip Calculator</h1>
-	<div id="calc">
+	<form id="calc">
 		<label>Bill amount:</label>
 			<input  id="amount" name="amount"><br>
 		<label>Percentage Tip:</label>
@@ -19,18 +19,18 @@
 		<label>Total:</label>
 			<input id="total"  name="total"><br>	
 		<input id="addup" type="submit" value="Calculate">		
-	</div>
+	</form>
 	 
 	<script type="text/javascript">
 	function calculate (){
 
-	var amount = $('amount').val();
-	var percentage = $('percentage').val();
+	var amount = $('#amount').val();
+	var percentage = $('#percentage').val();
 	var tip = amount * (percentage / 100);
 	var total = Number(amount) + tip;
 
-	$('tip').val( tip.toFixed(2) );
-	$('total').val( total.toFixed (2) );
+	$('#tip').val( tip.toFixed(2) );
+	$('#total').val( total.toFixed (2) );
 	return false;
 	
 }
